@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sucursals",
+  "info": {
+    "singularName": "sucursal",
+    "pluralName": "sucursals",
+    "displayName": "Sucursal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombreSucursal": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "text"
+    }
+  }
+}

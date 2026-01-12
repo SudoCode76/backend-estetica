@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tickets",
+  "info": {
+    "singularName": "ticket",
+    "pluralName": "tickets",
+    "displayName": "Ticket"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fecha": {
+      "type": "datetime"
+    },
+    "cuota": {
+      "type": "decimal"
+    },
+    "saldoPendiente": {
+      "type": "decimal"
+    },
+    "estadoTicket": {
+      "type": "boolean"
+    },
+    "tratamientos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tratamiento.tratamiento",
+      "mappedBy": "ticket"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "cliente": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cliente.cliente"
+    },
+    "estadoPago": {
+      "type": "enumeration",
+      "enum": [
+        "Completo",
+        "Incompleto"
+      ]
+    },
+    "sucursal": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sucursal.sucursal"
+    }
+  }
+}

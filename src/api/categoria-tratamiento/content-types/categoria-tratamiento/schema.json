@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categoria_tratamientos",
+  "info": {
+    "singularName": "categoria-tratamiento",
+    "pluralName": "categoria-tratamientos",
+    "displayName": "CategoriaTratamiento"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombreCategoria": {
+      "type": "string"
+    },
+    "estadoCategoria": {
+      "type": "boolean"
+    }
+  }
+}

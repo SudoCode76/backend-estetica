@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tratamientos",
+  "info": {
+    "singularName": "tratamiento",
+    "pluralName": "tratamientos",
+    "displayName": "Tratamiento"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombreTratamiento": {
+      "type": "string"
+    },
+    "precio": {
+      "type": "biginteger"
+    },
+    "estadoTratamiento": {
+      "type": "boolean"
+    },
+    "categoria_tratamiento": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::categoria-tratamiento.categoria-tratamiento"
+    },
+    "ticket": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ticket.ticket",
+      "inversedBy": "tratamientos"
+    }
+  }
+}
